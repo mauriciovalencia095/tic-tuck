@@ -1,0 +1,15 @@
+
+# Playwright & Node
+node_modules/
+test-results/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Environment
+.env
