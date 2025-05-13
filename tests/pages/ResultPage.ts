@@ -19,10 +19,10 @@ export class ResultPage {
 
   async extractOrderNumber(): Promise<string> {
     const rawText = await this.orderNumber.textContent();
-    if (!rawText) throw new Error('No se pudo obtener el número de orden');
+    if (!rawText) throw new Error('Could not find the order');
 
     const match = rawText.match(/\d+/); 
-    if (!match) throw new Error(`No se encontró un número en el texto: ${rawText}`);
+    if (!match) throw new Error(`Could not find the number ${rawText}`);
 
     return match[0]; 
   }
