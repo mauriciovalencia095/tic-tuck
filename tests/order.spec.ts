@@ -4,6 +4,8 @@ import { MenuPage } from './pages/MenuPage';
 import { CheckoutPage } from './pages/CheckoutPage';
 import { PaymentPage } from './pages/PaymentPage';
 import {ResultPage } from './pages/ResultPage';
+import { validateOrderViaAPI } from './utils/apiClient';
+
 
 test.describe('Test flow', () => {
   test('Step 1: Got to web site and select store called: "Automation"', async ({ page }) => {
@@ -24,6 +26,11 @@ test.describe('Test flow', () => {
     await checkoutPage.submitOrder();
     await paymentPage.payWithTestCard();
     await resultPage.verifyConfirmationMessage();
+
+    const orderNumber = await resultPage.extractOrderNumber();
+    await validateOrderViaAPI(orderNumber);
+
+
     
   });
 });
