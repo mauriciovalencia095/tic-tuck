@@ -37,7 +37,6 @@ export class PaymentPage {
     await this.rutInput.fill(customerData.rut);
     await this.continueButton.click();
     await this.payButton.click();
-    await this.page.pause();
-    
+
   }
 }
