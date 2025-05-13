@@ -2,6 +2,15 @@
 
 This project is an automated end-to-end testing framework built using [Playwright](https://playwright.dev/) with the Page Object Model (POM) design pattern. It simulates a complete user journey: searching a location, selecting a store, adding items, completing a payment via MercadoPago, and validating the resulting order via API.
 
+# task completion timestamps
+**Start Time:** 2025-05-11 08:00 PM(UTC)
+**End Time:** 2025-05-11 10:00 PM(UTC)
+
+**Start Time:** 2025-05-12 04:00 PM(UTC)
+**End Time:** 2025-05-12 08:57 PM(UTC)
+
+
+
 > ✅ **Latest successful order number (from last run): `4377535`**
 
 ---
